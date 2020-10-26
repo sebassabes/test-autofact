@@ -1,0 +1,41 @@
+<ng-container *ngIf="acceso==false">
+    <h1 align="center">Acceso no Autorizado.</h1>
+</ng-container>
+<ng-container *ngIf="acceso==true">
+    <hr />
+    <h1 align='center'>Formularios Ingresados</h1>
+    <hr />
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <div class="map table-responsive">
+                <table class="table border-1">
+                    <thead style="font-size:90%; text-align:justify;" class="bg-primary text-white">
+                        <tr>
+                            <th scope="col">correo</th>
+                            <th scope="col">fecha</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody style="font-size:90%; text-align:justify;">
+
+                        <tr *ngFor="let respuesta of lista">
+                            <th>{{respuesta.correo}}</th>
+                            <td>{{respuesta.fecha}} </td>
+
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+            <hr />
+        </div>
+    </div>
+</ng-container>

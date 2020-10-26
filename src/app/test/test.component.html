@@ -1,0 +1,95 @@
+<div class="card">
+    <div class="card-body">
+        <form #forma="ngForm" novalidate="">
+
+            <div class="form-group row">
+                <h4 align="center"> Formulario Autofact
+                </h4>
+
+            </div>
+            <hr/>
+            <div class="form-group row">
+                <label class="col-sm col-form-label">1. ¿Cuáles cree usted son los elementos positivos de la actividad en la cual participó?(mínimo 15 caracteres)</label>
+                <div *ngIf="p1.errors?.required || p1.errors?.minlength">
+                    <i class="fas fa-times-circle" style="color:red"></i>
+
+                </div>
+                <div *ngIf="p1.valid">
+                    <i class="fas fa-check-circle" style="color:green"></i>
+                </div>
+                <div class="col-md-12">
+                    <textarea [(ngModel)]="formulario.p1" name="p1" #p1="ngModel" minlength="15" class="form-control" rows="10" required></textarea>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="col-sm col-form-label">¿La información es Corrercta?
+</label>
+
+
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <select class="form-control" [(ngModel)]="formulario.p2" name="p2" #p2="ngModel" required>
+<option [ngValue]="null">-- Seleccione Alguna Opción--</option>
+<option value="SI">SI</option>
+<option value="NO">NO</option>
+<option value="MAS O MENOS">MAS O MENOS</option>
+</select>
+
+                        <div class="input-group-append">
+                            <div *ngIf="p2.invalid">
+                                <button class="btn btn-outline-danger" disabled><i class="fas fa-times-circle " style="color:red "></i></button>
+                            </div>
+                            <div *ngIf="p2.valid">
+                                <button class="btn btn-outline-success " disabled><i class="fas fa-check-circle " style="color:green "></i></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm col-form-label">
+      ¿Del 1 al 5 es rapido el sitio?
+</label>
+
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <select class="form-control" [(ngModel)]="formulario.p3" name="p3" #p3="ngModel" required>
+<option [ngValue]="null">-- Seleccione Alguna Opción--</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+
+                        <div class="input-group-append">
+                            <div *ngIf="p3.invalid">
+                                <button class="btn btn-outline-danger" disabled><i class="fas fa-times-circle " style="color:red "></i></button>
+                            </div>
+                            <div *ngIf="p3.valid">
+                                <button class="btn btn-outline-success " disabled><i class="fas fa-check-circle " style="color:green "></i></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <hr />
+            <div class="form-group row">
+
+                <div class="col-md-8 ml-auto mr-auto text-center">
+
+                    <button [disabled]="!forma.valid" (click)="guardar()" class="btn btn-outline-primary w-50">
+                                     Enviar <i class="fa fa-forward"></i>
+            </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
