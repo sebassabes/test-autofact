@@ -36,4 +36,4 @@ Cosas a mejorar
 
 3)  Mejorar aspecto mas visuales del programa para que el usuario lo entienda de mejor manera.
 
-5) un camo visual de que el usuario sepa que no puede realizr el formulario el mismo mes.
+5) un campo visual de que el usuario sepa que no puede realizr el formulario el mismo mes.
