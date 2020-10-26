@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Descricion de la aplicación
+
+Para la conexion de la api deben introducirse a servicio de test ubicado en la caperta app y modificar la variable API_URL
+Cosas a mejorar 
+1)  Adición en la funciones de torta para ver la cantidad de porcentaje han votado si les a aparecido si el programa es rapido o no.
+
+2)  Mas seguridad en los datos, pero si tiene restricciones no pueden entrar a formulario o la lista de formulario si no realizan el login correspondiente en su tipo ya  sea admin o usuario común.
+
+3)  Mejorar aspecto mas visuales del programa para que el usuario lo entienda de mejor manera.
+
+5) un camo visual de que el usuario sepa que no puede realizr el formulario el mismo mes.
